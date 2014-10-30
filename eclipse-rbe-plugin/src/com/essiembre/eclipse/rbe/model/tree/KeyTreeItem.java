@@ -214,7 +214,8 @@ public class KeyTreeItem implements Comparable<KeyTreeItem>, IKeyTreeVisitable {
      */
     public boolean applyFilter(String filter) {
         visible = false;
-        if (id.indexOf(filter) != -1) {
+        //if (id.indexOf(filter) != -1) {
+        if (id.toLowerCase().indexOf(filter.toLowerCase()) != -1) {
             visible = true;
         }
         for (KeyTreeItem child : children) {
