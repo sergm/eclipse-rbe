@@ -17,6 +17,8 @@ package com.essiembre.eclipse.rbe.model.bundle;
 
 import java.util.regex.Pattern;
 
+import org.eclipse.core.runtime.Platform;
+
 import com.essiembre.eclipse.rbe.RBEPlugin;
 import com.essiembre.eclipse.rbe.model.workbench.RBEPreferences;
 
@@ -27,9 +29,14 @@ import com.essiembre.eclipse.rbe.model.workbench.RBEPreferences;
 public final class PropertiesParser {
 
     /** System line separator. */
-    private static final String SYSTEM_LINE_SEPARATOR = 
-            System.getProperty("line.separator");
-    
+    private static final String SYSTEM_LINE_SEPARATOR = Platform.getPreferencesService()
+        .getString(
+            "org.eclipse.core.runtime",
+            "line.separator",
+            System.getProperty("line.separator"),
+            null
+        );
+
     /** Characters accepted as key value separators. */
     private static final String KEY_VALUE_SEPARATORS = "=:";
     
