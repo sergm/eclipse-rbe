@@ -1,5 +1,15 @@
 Here is an overview of changes for each release:
 
+Release 1.0.6 (2017-02-24)
+--------------------------
+- Fixed NPE in Eclipse Neon (github #52).
+
+Release 1.0.5 (2015-11-30)
+--------------------------
+- Fixed efault bundle not showing (github #25).
+- Keys filter now case-insensitive (github #27).
+- Fixed German and Spanish translations.
+
 Release 1.0.4 (2014-10-12)
 --------------------------
 - Removed hard-coding of white color for editor text field value (github #11).
